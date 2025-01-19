@@ -1,0 +1,98 @@
+@charset "UTF-8";
+
+* {
+    margin: 0px;
+    padding: 0px;
+    
+}
+
+body {
+    min-height: 100vh;
+    background-color: #000000;
+}
+
+/*Cabeçalho*/
+header {
+    background-color: #58422e;
+    color: white;
+    text-align: center;
+    transition: all 10s;
+}
+header:hover {
+    background-color: #8d6a49;
+    transition: 5s;
+}
+
+header > h1 {
+    padding-top: 50px;
+    font-variant: small-caps;
+    font-size: 62px;
+    
+}
+header > p {
+    padding-bottom: 50px;
+    font-variant: small-caps;
+}
+a {
+    color: white;
+    text-decoration: none;/*Tira o sublinhado*/
+    font-weight: bolder;
+    
+}
+a:hover {
+    text-decoration: underline;
+}
+
+section {
+    
+    padding-top:4vh;
+    padding-bottom: 4vh;
+    line-height: 35px;/*Espaço entre as linhas*/
+    padding-left: 30px;
+}
+
+section.normal{
+    background-color: rgb(247, 242, 233);
+    color: black;
+}
+section.imagem{
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-color: white;
+    background-color: darkgray;
+    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.425);
+    background-attachment: fixed;
+}
+section.imagem > p {
+    color: white;
+    background-color: #00000023;
+    width: 20vh;
+    text-shadow: 9px 9px 30px black;
+    border-radius: 5px;
+    transition: all 2s;
+}
+section.imagem > p:hover {
+    background-color: #00000067;
+    transition-duration: 2s;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+section > p {
+    padding: 20px;
+}
+section#img1 {
+    background-image: url(image/letras0.jpg);
+    
+}
+section#img2 {
+    background-image: url(image/violino.jpg);
+
+}
+/*Rodapé*/
+footer {
+    color: white;
+    background-color: #8d6a49;
+    text-align: center;
+    padding: 7px;
+}
+

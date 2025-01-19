@@ -1,3 +1,3 @@
 Para acessar o Site:<div>
-  <img src="" width="300px"/>
+  <img src="image/qrcode.png" width="300px"/>
   </div>

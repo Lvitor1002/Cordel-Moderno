@@ -1,98 +1,183 @@
 @charset "UTF-8";
 
+
+/*
+CORES:
+    Cabeçalho: #58422e;
+    Cabeçalho-Hover: #8d6a49;
+
+    Conteúdo: 
+            white;
+            darkgray;
+
+*/
+
 * {
     margin: 0px;
     padding: 0px;
     
 }
 
-body {
-    min-height: 100vh;
-    background-color: #000000;
+body{
+    height: 100vh;
 }
 
-/*Cabeçalho*/
-header {
+/*      CABEÇALHO       */
+
+header{
+    padding: 20px 0;
     background-color: #58422e;
-    color: white;
-    text-align: center;
-    transition: all 10s;
+    box-shadow: 1px 1px 39px -10px black;
+    transition: all 1s;
+    
 }
-header:hover {
+header:hover{
     background-color: #8d6a49;
-    transition: 5s;
+    transition-duration: 4s;
 }
-
-header > h1 {
-    padding-top: 50px;
-    font-variant: small-caps;
-    font-size: 62px;
-    
-}
-header > p {
-    padding-bottom: 50px;
-    font-variant: small-caps;
-}
-a {
+header h1{
     color: white;
-    text-decoration: none;/*Tira o sublinhado*/
-    font-weight: bolder;
-    
 }
-a:hover {
-    text-decoration: underline;
-}
-
-section {
-    
-    padding-top:4vh;
-    padding-bottom: 4vh;
-    line-height: 35px;/*Espaço entre as linhas*/
-    padding-left: 30px;
-}
-
-section.normal{
-    background-color: rgb(247, 242, 233);
-    color: black;
-}
-section.imagem{
-    background-size: cover; 
-    background-repeat: no-repeat;
-    background-color: white;
-    background-color: darkgray;
-    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.425);
-    background-attachment: fixed;
-}
-section.imagem > p {
+header a{
     color: white;
-    background-color: #00000023;
-    width: 20vh;
-    text-shadow: 9px 9px 30px black;
-    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+header p{
+    color: white;
+    font-size: 14px;
+    padding: 0 5px;
+}
+
+.flex{
+    display: flex;
+    flex-direction: column; /* Para empilhar elementos verticalmente */
+    align-items: center;
+    justify-content: center;
+}
+h1{
+    font-size: 45px;
+}
+.info-header{
+    text-align: justify; /* alinha o texto dentro do elemento */
+    padding-bottom: 20px;
+}
+.info-header a {
     transition: all 2s;
 }
-section.imagem > p:hover {
-    background-color: #00000067;
+.info-header a:hover {
     transition-duration: 2s;
-    padding-top: 25px;
-    padding-bottom: 25px;
+    color: rgb(235, 203, 144);
 }
-section > p {
-    padding: 20px;
+
+.menu{
+    
+    background-color: wheat;
+    padding: 5px 4%;
+    width: 100%;
+    
+    text-align: center; /* Centraliza os itens dentro do menu */
+    border-radius: 40px;
 }
-section#img1 {
-    background-image: url(image/letras0.jpg);
+li a{
+    color: rgb(0, 0, 0);
+    font-weight:500;
+    font-size: 18px;
+
+}
+.menu ul li{
+    list-style-type: none;
+    display: inline-block; /* Mantém os itens de menu na mesma linha */
+    margin: 0 20px;
+    cursor: pointer;
+}
+.menu li:hover{
+    transform: scale(1.08);
+}
+
+
+/*      CONTEÚDO       */
+
+.interface{
+    display: flex;
+    justify-content: flex-start;
+    text-align: justify;
+    flex-direction: column; /* Para empilhar elementos verticalmente */
+    padding: 5% 6%;
+    background-color: rgba(250, 234, 206, 0.568);
+}
+
+section{
+    padding: 15px 0;
+}
+.letras p{
+    line-height: 30px;
+}
+.imagem-letras p{
+    padding: 0 2%;
+    font-weight: 500;
+    color: white;
+    line-height: 30px;
+    text-shadow: 0px 0px 39px #000000;
+    width: 190px;
+    border-radius: 0px 40px 40px 0px;
+
+    transition: all 1s;
+}
+.imagem-letras p:hover{
+    background-color: rgba(0, 0, 0, 0.041);
+    transition-duration: 2s;
+}
+.imagem-letras{
+    line-height: 30px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    box-shadow: inset -1px -1px 250px 123px rgba(0, 0, 0, 0.425);
+    border-radius: 30px;
+
+    background-position: 20% 0%; /*100% na horizontal e 0% na vertical*/
+    transition: all 5s;
     
 }
-section#img2 {
-    background-image: url(image/violino.jpg);
-
+.imagem-letras:hover{
+    transform: scale(1.04);
+    background-position: 80% 80%; /*100% na horizontal e 100% na vertical*/
+    transition-duration: 3s;    
 }
-/*Rodapé*/
-footer {
-    color: white;
-    background-color: #8d6a49;
+#img1{
+    background-image: url(image/letras2.jpg);
+}
+#img2{
+    background-image: url(image/song.jpg);
+}
+
+
+/*      RODAPÉ       */
+footer{
+    padding: 10px 0;
     text-align: center;
-    padding: 7px;
+    background-color: wheat;
 }
+.info-footer{
+    padding: 7px 0;
+    background-color:  #58422e;
+}
+.info-footer p{
+    color: white;
+    font-size: 18px;
+}
+.info-footer a{
+    font-size: 18px;
+    color: rgb(184, 147, 79);
+    text-decoration: none;
+    transition: all 10s;
+}
+.info-footer a:hover{
+    transform: scale(1.05);
+    color: wheat;
+    text-decoration: none;
 
+    transition-duration: 1s;
+}
